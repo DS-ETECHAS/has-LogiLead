@@ -1,6 +1,9 @@
+using LogiLead.api.Config;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+DatabaseContext.AddContext(builder);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
