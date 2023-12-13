@@ -8,7 +8,7 @@ namespace LogiLead.api.Config
         public static void AddContext(WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<LogiLeadContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString(""))
+                options.UseSqlServer(builder.Configuration.GetConnectionString("localConnection"))
             );
         }
     }

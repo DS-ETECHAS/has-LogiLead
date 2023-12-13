@@ -20,9 +20,7 @@ namespace LogiLead.api.Models
         [JsonIgnore]
         public string HashedPassword { get; set; }
         
-        [JsonIgnore]
-        public string Salt { get; set; }
-        
         public DateTime PasswordChangeDate { get; set; } = DateTime.UtcNow;
+        public User User { get; set; }
     }
 }
